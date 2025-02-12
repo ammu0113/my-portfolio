@@ -8,7 +8,6 @@ const Contact = () => {
   const { personalInfo } = usePortfolio();
   const form = useRef();
   const [status, setStatus] = useState('');
-  console.log('process.env', process.env)
 
   const sendEmail = (e) => {
     e.preventDefault();
