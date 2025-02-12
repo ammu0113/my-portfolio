@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.education {
+  padding: $spacing-unit * 10 0;
+  background: $background-secondary;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-unit * 3;
+    margin-top: $spacing-unit * 5;
+  }
+
+  &__item {
+    @include glass-effect;
+    padding: $spacing-unit * 4;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      color: $primary-color;
+      margin-bottom: $spacing-unit * 2;
+      font-size: 1.2rem;
+    }
+
+    .institution {
+      color: $secondary-color;
+      margin-bottom: $spacing-unit;
+      font-weight: 500;
+    }
+
+    .period {
+      color: $text-secondary;
+      font-size: 0.9rem;
+    }
+  }
+} 

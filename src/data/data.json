@@ -1,0 +1,128 @@
+{
+  "personalInfo": {
+    "firstname": "Amulya",
+    "lastname": "Bandla",
+    "phone": "+1 (845)-419-9560",
+    "email": "amulya1994.b@gmail.com",
+    "location": "New Paltz, New York, 12561"
+  },
+  "summary": [
+    "Senior Full Stack Developer with 7+ years of expertise in architecting and developing enterprise-scale applications using React.js, Node.js, and modern JavaScript ecosystems",
+    "Demonstrated success in optimizing Single Page Application performance by 40-50% through implementation of advanced techniques including code splitting, lazy loading, component optimization, and strategic caching mechanisms",
+    "Specialized in architecting robust state management solutions using Redux and Context API, while implementing server-side rendering with Next.js to enhance application performance and SEO capabilities"
+  ],
+  "skills": {
+    "languages": ["JavaScript", "TypeScript", "Python"],
+    "cloudTechnologies": [
+      "AWS - EC2",
+      "Lambda",
+      "S3",
+      "API Gateway",
+      "RDS",
+      "DynamoDB",
+      "CloudWatch",
+      "CloudFront",
+      "Route53",
+      "SQS",
+      "SNS",
+      "Elastic Beanstalk",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "CI/CD pipelines",
+      "Terraform",
+      "Ansible"
+    ],
+    "webTechnologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES5, ES6+)",
+      "React.js",
+      "Vue.js",
+      "jQuery",
+      "Node.js",
+      "Bootstrap",
+      "Tailwind CSS",
+      "AJAX",
+      "DOJO",
+      "XML",
+      "Web Services (SOAP, REST, WSDL)",
+      "GraphQL",
+      "JSON",
+      "Next.js"
+    ],
+    "reactEcosystem": [
+      "Redux-Saga",
+      "Redux Toolkit",
+      "React Lifecycle Methods",
+      "React Performance Optimization",
+      "Custom Hooks Development",
+      "Component Design Patterns",
+      "Higher-Order Components",
+      "Render Props"
+    ],
+    "databaseEnvironments": [
+      "Oracle 10g/9i",
+      "SQL Server",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Cassandra",
+      "DynamoDB",
+      "Redis",
+      "Firebase",
+      "Influx DB"
+    ],
+    "versionControlTools": [
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Bitbucket",
+      "SVN",
+      "Visual Source Safe",
+      "CVS",
+      "Tortoise SVN"
+    ],
+    "automationTesting": [
+      "Jest",
+      "React Testing Library",
+      "Cypress",
+      "Selenium",
+      "Cucumber",
+      "Playwright",
+      "Storybook",
+      "Karma",
+      "Jasmine"
+    ],
+    "operatingSystems": [
+      "Windows",
+      "MacOS",
+      "Linux (Ubuntu, CentOS, Red Hat)",
+      "UNIX"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Qualcomm",
+      "location": "New York",
+      "position": "Frontend React Developer",
+      "period": "March 2024 - Present",
+      "responsibilities": [
+        "Architected and implemented a comprehensive React component library utilized across multiple enterprise products, resulting in a 30% reduction in development time and improved UI consistency",
+        "Spearheaded frontend performance optimization initiatives, implementing code splitting, lazy loading, and React.memo() for selective rendering, which reduced initial load times by 45%"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science, Computer Science",
+      "institution": "State University of New York, New Paltz, NY",
+      "period": "2022-2024"
+    },
+    {
+      "degree": "Bachelor of Technology, Electronics and Communication Engineering",
+      "institution": "JNTU, Kakinada",
+      "period": "2011-2015"
+    }
+  ]
+}

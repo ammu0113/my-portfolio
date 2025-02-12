@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+
+.footer {
+  background: $background-primary;
+  padding: $spacing-unit * 4 0;
+  border-top: 1px solid rgba($primary-color, 0.05);
+  box-shadow: 0 -2px 10px rgba($primary-color, 0.03);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-unit * 3;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -$spacing-unit * 2;
+      width: 50px;
+      height: 2px;
+      background: $secondary-color;
+      opacity: 0.3;
+    }
+  }
+
+  &__copyright {
+    color: $text-secondary;
+    font-size: 0.95rem;
+    font-family: $font-primary;
+    letter-spacing: 0.3px;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: $spacing-unit * 3;
+    align-items: center;
+  }
+
+  &__social-link {
+    color: $text-secondary;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    padding: $spacing-unit;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    
+    &:hover {
+      color: $secondary-color;
+      background: rgba($secondary-color, 0.1);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'md')) {
+  .footer {
+    padding: $spacing-unit * 3 0;
+    
+    &__content {
+      flex-direction: column;
+      text-align: center;
+      gap: $spacing-unit * 2;
+      
+      &::before {
+        bottom: -$spacing-unit;
+      }
+    }
+
+    &__copyright {
+      order: 2;
+      font-size: 0.9rem;
+    }
+
+    &__social {
+      order: 1;
+      margin-bottom: $spacing-unit;
+    }
+  }
+} 

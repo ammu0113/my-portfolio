@@ -1,0 +1,25 @@
+// Colors
+$primary-color: #2d3436;
+$secondary-color: #0984e3;
+$accent-color: #00b894;
+$text-primary: #2d3436;
+$text-secondary: #636e72;
+$background-primary: #ffffff;
+$background-secondary: #f5f6fa;
+$glass-effect: rgba(255, 255, 255, 0.1);
+
+// Typography
+$font-primary: 'Inter', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+// Breakpoints
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+
+// Spacing
+$spacing-unit: 8px;
+$container-padding: 24px; 

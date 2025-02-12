@@ -1,0 +1,125 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+// Define category-specific colors
+$category-colors: (
+  'languages': #4A90E2,      // Blue
+  'cloudTechnologies': #F5A623, // Orange
+  'webTechnologies': #7ED321,   // Green
+  'reactEcosystem': #61DAFB,    // React Blue
+  'databaseEnvironments': #476282, // Navy Blue
+  'versionControlTools': #E27A68,  // Coral
+  'automationTesting': #95C13D,    // Light Green
+  'operatingSystems': #476282      // Navy Blue
+);
+
+.skills {
+  padding: $spacing-unit * 10 0;
+  background: $background-secondary;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: $spacing-unit * 3;
+    margin-top: $spacing-unit * 5;
+  }
+
+  &__category {
+    background: white;
+    border-radius: 16px;
+    padding: $spacing-unit * 3;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+
+    @each $category, $color in $category-colors {
+      &[data-category="#{$category}"] {
+        .skills__category-icon {
+          background: $color;
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: $spacing-unit * 2;
+
+          svg {
+            color: white;
+            font-size: 24px;
+          }
+        }
+
+        .skill-tag {
+          background: rgba($color, 0.1);
+          color: darken($color, 10%);
+          border: none;
+
+          &:hover {
+            background: rgba($color, 0.15);
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+
+    &-header {
+      margin-bottom: $spacing-unit * 3;
+      
+      h3 {
+        color: $primary-color;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: $spacing-unit;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+.skill-tag {
+  padding: $spacing-unit $spacing-unit * 2;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  
+  &__icon {
+    font-size: 1rem;
+  }
+}
+
+// Mobile optimizations
+@media screen and (max-width: 768px) {
+  .skills {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: $spacing-unit * 2;
+      padding: 0 $spacing-unit;
+    }
+
+    &__category {
+      padding: $spacing-unit * 2;
+    }
+  }
+
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+} 

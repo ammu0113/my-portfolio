@@ -1,0 +1,225 @@
+{
+  "personalInfo": {
+    "firstname": "Amulya",
+    "lastname": "Bandla",
+    "phone": "+1 (845)-419-9560",
+    "email": "amulya1994.b@gmail.com",
+    "location": "New Paltz, New York, 12561"
+  },
+  "summary": [
+    "Senior Full Stack Developer with 7+ years of expertise in architecting and developing enterprise-scale applications using React.js, Node.js, and modern JavaScript ecosystems",
+    "Demonstrated success in optimizing Single Page Application performance by 40-50% through implementation of advanced techniques including code splitting, lazy loading, component optimization, and strategic caching mechanisms",
+    "Specialized in architecting robust state management solutions using Redux and Context API, while implementing server-side rendering with Next.js to enhance application performance and SEO capabilities",
+    "Proven track record in cloud architecture and deployment, leveraging AWS, Azure, and GCP to build scalable solutions capable of handling millions of daily transactions",
+    "Expert in implementing real-time data processing solutions using Apache Kafka, ensuring seamless handling of high-velocity data streams in production environments",
+    "Strong advocate for code quality and best practices, implementing comprehensive testing strategies using Jest and React Testing Library, while maintaining 90%+ test coverage across projects",
+    "Experienced technical leader with a proven ability to mentor junior developers, establish coding standards, and drive adoption of modern development practices across engineering teams",
+    "Proficient in modern deployment workflows utilizing Docker, Kubernetes, and CI/CD pipelines, ensuring reliable and efficient application delivery across multiple environments",
+    "Extensive experience with Redux Toolkit and Redux-Saga for complex asynchronous state management, successfully implementing event-sourcing patterns and real-time data synchronization across enterprise applications"
+  ],
+  "skills": {
+    "languages": ["JavaScript", "TypeScript", "Python"],
+    "cloudTechnologies": [
+      "AWS - EC2",
+      "Lambda",
+      "S3",
+      "API Gateway",
+      "RDS",
+      "DynamoDB",
+      "CloudWatch",
+      "CloudFront",
+      "Route53",
+      "SQS",
+      "SNS",
+      "Elastic Beanstalk",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "CI/CD pipelines",
+      "Terraform",
+      "Ansible"
+    ],
+    "webTechnologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES5, ES6+)",
+      "React.js",
+      "Vue.js",
+      "jQuery",
+      "Node.js",
+      "Bootstrap",
+      "Tailwind CSS",
+      "AJAX",
+      "DOJO",
+      "XML",
+      "Web Services (SOAP, REST, WSDL)",
+      "GraphQL",
+      "JSON",
+      "Next.js"
+    ],
+    "reactEcosystem": [
+      "Redux-Saga",
+      "Redux Toolkit",
+      "React Lifecycle Methods",
+      "React Performance Optimization",
+      "Custom Hooks Development",
+      "Component Design Patterns",
+      "Higher-Order Components",
+      "Render Props"
+    ],
+    "databaseEnvironments": [
+      "Oracle 10g/9i",
+      "SQL Server",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Cassandra",
+      "DynamoDB",
+      "Redis",
+      "Firebase",
+      "Influx DB"
+    ],
+    "versionControlTools": [
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Bitbucket",
+      "SVN",
+      "Visual Source Safe",
+      "CVS",
+      "Tortoise SVN"
+    ],
+    "automationTesting": [
+      "Jest",
+      "React Testing Library",
+      "Cypress",
+      "Selenium",
+      "Cucumber",
+      "Playwright",
+      "Storybook",
+      "Karma",
+      "Jasmine"
+    ],
+    "operatingSystems": [
+      "Windows",
+      "MacOS",
+      "Linux (Ubuntu, CentOS, Red Hat)",
+      "UNIX"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Qualcomm",
+      "location": "New York",
+      "position": "Frontend React Developer",
+      "period": "March 2024 - Present",
+      "responsibilities": [
+        "Architected and implemented a comprehensive React component library utilized across multiple enterprise products, resulting in a 30% reduction in development time and improved UI consistency",
+        "Spearheaded frontend performance optimization initiatives, implementing code splitting, lazy loading, and React.memo() for selective rendering, which reduced initial load times by 45%",
+        "Led the development of scalable frontend architecture using React.js and Redux, implementing domain-driven design principles",
+        "Designed and developed a microservices architecture using the MERN stack deployed on OpenStack",
+        "Built and optimized RESTful APIs using Node.js and Express.js",
+        "Engineered efficient MongoDB database schemas and queries, reducing query response times by 60%",
+        "Collaborated with UI/UX teams to implement a comprehensive design system in React",
+        "Implemented comprehensive testing strategies using Jest and React Testing Library, achieving 90% test coverage",
+        "Optimized API performance by implementing caching strategies using Redis",
+        "Led the migration from REST to GraphQL for key application features"
+      ]
+    },
+    {
+      "company": "Tata Teleservices",
+      "location": "India",
+      "position": "React Developer",
+      "period": "July 2020 - July 2022",
+      "responsibilities": [
+        "Created reusable React.js components and services",
+        "Developed and maintained consumer-facing applications",
+        "Collaborated with UI/UX designers to implement responsive, pixel-perfect designs",
+        "Developed various screens using React.js and utilized predefined components",
+        "Built dynamic, data-driven applications by integrating RESTful APIs and GraphQL services",
+        "Implemented component-based architecture using React Hooks",
+        "Worked with React.js and Node.js libraries, utilizing NPM and Gulp",
+        "Designed and developed full-stack web applications",
+        "Involved in writing application-level code to interact with APIs",
+        "Implemented AJAX for real-time data updates",
+        "Debugged applications using React DevTools and Chrome DevTools"
+      ]
+    },
+    {
+      "company": "Techno Tree",
+      "location": "India",
+      "position": "Web Developer",
+      "period": "June 2017 - May 2019",
+      "responsibilities": [
+        "Architected and developed modern React-based Single Page Applications",
+        "Led the development of complex React components and custom hooks",
+        "Engineered robust REST API integration patterns",
+        "Established and maintained comprehensive component documentation using Storybook",
+        "Implemented state management solutions using Redux Toolkit and React Context API",
+        "Developed and maintained a reusable React component library",
+        "Optimized React application performance through code splitting",
+        "Set up and maintained CI/CD pipelines using GitHub Actions",
+        "Containerized React applications using Docker",
+        "Established frontend architectural patterns and best practices",
+        "Led code reviews focusing on React best practices",
+        "Implemented comprehensive error boundary strategies"
+      ]
+    },
+    {
+      "company": "BTGroup",
+      "location": "India",
+      "position": "UI Developer",
+      "period": "April 2015 - May 2017",
+      "responsibilities": [
+        "Created efficient design and developed User Interaction screens",
+        "Designed user interactive web pages using web technologies",
+        "Translated wireframes and high-fidelity designs into well-structured code",
+        "Developed non-functional HTML, CSS pages from mockups",
+        "Integrated web applications with back-end services via RESTful APIs",
+        "Fixed UI/UX bugs and optimized web pages for SEO",
+        "Worked on server-side JavaScript using Node.js",
+        "Developed a large-scale, real-time, live blogging server and UI",
+        "Built responsive UI components using React.js",
+        "Monitored the site for UI inconsistencies"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science, Computer Science",
+      "institution": "State University of New York, New Paltz, NY",
+      "period": "2022-2024"
+    },
+    {
+      "degree": "Bachelor of Technology, Electronics and Communication Engineering",
+      "institution": "JNTU, Kakinada",
+      "period": "2011-2015"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Modern Developer Portfolio",
+      "description": "A modern, responsive portfolio website built with React.js showcasing professional experience and technical expertise. Features interactive skill cards, animated timeline, and glass morphism effects.",
+      "thumbnail": "/images/portfolio-thumbnail.png",
+      "liveLink": "https://amulyabandla.com",
+      "sourceCode": "https://github.com/amulyabandla/portfolio",
+      "technologies": [
+        "React.js",
+        "SCSS",
+        "Context API",
+        "Font Awesome",
+        "Framer Motion",
+        "Responsive Design",
+        "Glass Morphism",
+        "CSS Grid/Flexbox"
+      ],
+      "highlights": [
+        "Implemented responsive design with mobile-first approach",
+        "Created interactive skill cards with category-specific styling",
+        "Developed animated timeline for experience section",
+        "Optimized performance with modern React patterns",
+        "Achieved excellent accessibility and SEO scores"
+      ]
+    }
+  ]
+}
