@@ -7,78 +7,116 @@
   background: linear-gradient(135deg, $background-primary 0%, $background-secondary 100%);
 
   &__container {
-    @include flex(column, center, flex-start);
+    @include flex(row, space-between, center);
     max-width: 1200px;
     margin: 0 auto;
     padding: $container-padding;
     min-height: calc(100vh - 80px);
+    gap: 2rem;
   }
 
-  &__content {
-    max-width: 800px;
+  &__left {
+    flex: 1;
+    
+    h1 {
+      font-size: 1.5rem;
+      color: $text-secondary;
+      margin-bottom: $spacing-unit;
+    }
+
+    h2.gradient-text {
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, $secondary-color, $accent-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: $text-secondary;
+      margin: $spacing-unit * 2 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: $text-secondary;
+      margin-bottom: $spacing-unit * 3;
+    }
   }
 
-  &__greeting {
-    display: block;
-    font-size: 1.5rem;
-    color: $text-secondary;
-    margin-bottom: $spacing-unit;
-  }
-
-  &__name {
-    font-size: 4rem;
-    font-weight: 700;
-    color: $primary-color;
-    margin-bottom: $spacing-unit * 2;
-    background: linear-gradient(45deg, $secondary-color, $accent-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  &__title {
-    font-size: 2rem;
-    color: $text-secondary;
-    margin-bottom: $spacing-unit * 3;
-  }
-
-  &__summary {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: $text-secondary;
-    margin-bottom: $spacing-unit * 4;
-  }
-
-  &__cta {
-    @include flex(row, flex-start, center);
-    gap: $spacing-unit * 2;
-    margin-top: $spacing-unit * 3;
-  }
-
-  &__resume-btn {
-    display: inline-flex;
+  &__right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: $spacing-unit;
-    padding: $spacing-unit * 1.5 $spacing-unit * 2.5;
-    background: $secondary-color;
-    color: $background-primary;
-    text-decoration: none;
-    border-radius: 25px;
-    font-family: $font-primary;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba($secondary-color, 0.2);
+    
+    .hero__profile-img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    }
+  }
 
-    svg {
-      font-size: 1.2rem;
+  &__buttons {
+    display: flex;
+    gap: $spacing-unit * 2;
+    
+    button {
+      padding: $spacing-unit * 1.5 $spacing-unit * 2.5;
+      border-radius: 25px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: $spacing-unit;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.btn-primary {
+        background: $secondary-color;
+        color: white;
+        
+        &:hover {
+          background: darken($secondary-color, 10%);
+          transform: translateY(-2px);
+        }
+      }
+
+      &.btn-secondary {
+        background: transparent;
+        border: 2px solid $secondary-color;
+        color: $secondary-color;
+        
+        &:hover {
+          background: $secondary-color;
+          color: white;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      flex-direction: column-reverse;
+      text-align: center;
     }
 
-    &:hover {
-      background: darken($secondary-color, 10%);
-      transform: translateY(-2px);
+    &__buttons {
+      justify-content: center;
     }
 
-    &:active {
-      transform: translateY(0);
+    &__right {
+      margin-bottom: $spacing-unit * 2;
+      
+      .hero__profile-img {
+        max-width: 300px;
+      }
     }
   }
 }
