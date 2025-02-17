@@ -1,6 +1,6 @@
 {
-  "short_name": "Amulya Bandla",
-  "name": "Amulya Bandla | Full Stack Developer",
+  "short_name": "Amulya Portfolio",
+  "name": "Amulya Bandla | Senior Full Stack Developer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0984e3",
+  "theme_color": "#0077FF",
   "background_color": "#ffffff"
 }
