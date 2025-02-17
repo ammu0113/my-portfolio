@@ -1,0 +1,134 @@
+@import '../../styles/variables';
+
+.calendar {
+  padding: $spacing-unit * 4 0;
+  background: $background-primary;
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 $spacing-unit * 2;
+  }
+
+  &__content {
+    background: $background-secondary;
+    border-radius: 12px;
+    padding: $spacing-unit * 3;
+    box-shadow: 0 4px 20px rgba($primary-color, 0.1);
+  }
+
+  &__dates {
+    display: flex;
+    gap: $spacing-unit;
+    margin-bottom: $spacing-unit * 3;
+    overflow-x: auto;
+    padding-bottom: $spacing-unit;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($primary-color, 0.1);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $secondary-color;
+      border-radius: 2px;
+    }
+  }
+
+  &__date-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-unit * 1.5;
+    min-width: 80px;
+    border: 1px solid rgba($primary-color, 0.1);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    .day {
+      font-size: 0.9rem;
+      color: $text-secondary;
+      margin-bottom: $spacing-unit * 0.5;
+    }
+
+    .date {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $text-primary;
+    }
+
+    &:hover {
+      background: rgba($secondary-color, 0.05);
+    }
+
+    &.active {
+      background: $secondary-color;
+      border-color: $secondary-color;
+
+      .day, .date {
+        color: $background-primary;
+      }
+    }
+  }
+
+  &__slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: $spacing-unit;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: $spacing-unit;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($primary-color, 0.1);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $secondary-color;
+      border-radius: 2px;
+    }
+  }
+
+  &__slot-btn {
+    padding: $spacing-unit $spacing-unit * 1.5;
+    border: 1px solid rgba($primary-color, 0.1);
+    border-radius: 6px;
+    background: transparent;
+    color: $text-primary;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba($secondary-color, 0.05);
+      border-color: $secondary-color;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'md')) {
+  .calendar {
+    &__content {
+      padding: $spacing-unit * 2;
+    }
+
+    &__date-btn {
+      min-width: 70px;
+      padding: $spacing-unit;
+    }
+  }
+} 
