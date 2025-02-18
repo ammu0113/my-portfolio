@@ -202,7 +202,7 @@
       "description": "A modern, responsive portfolio website built with React.js showcasing professional experience and technical expertise. Features interactive skill cards, animated timeline, and glass morphism effects.",
       "thumbnail": "images/portfolio-thumbnail.png",
       "liveLink": " https://ammu0113.github.io/my-portfolio/",
-      "sourceCode": "https://github.com/amulyabandla/portfolio",
+      "sourceCode": "https://github.com/ammu0113/my-portfolio",
       "technologies": [
         "React.js",
         "SCSS",

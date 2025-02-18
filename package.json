@@ -1,7 +1,7 @@
 {
   "name": "your-portfolio",
   "version": "0.1.0",
-  "homepage": "https://amulyabandla.github.io/my-portfolio/",
+  "homepage": "https://ammu0113.github.io/my-portfolio/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
