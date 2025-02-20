@@ -1,4 +1,23 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+
+# Sitemaps
 Sitemap: https://ammu0113.github.io/my-portfolio/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Specific path rules
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+
+# Prevent crawling of certain paths
+Disallow: /api/
+Disallow: /temp/
+Disallow: /draft/
