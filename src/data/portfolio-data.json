@@ -220,6 +220,44 @@
         "Optimized performance with modern React patterns",
         "Achieved excellent accessibility and SEO scores"
       ]
+    },
+
+    {
+      "title": "URL Shortener",
+      "description": "A full-stack URL shortening application built with MERN stack (MongoDB, Express.js, React.js, Node.js) that allows users to create, manage, and track shortened URLs with analytics. Features user authentication, real-time analytics, and a responsive dashboard.",
+      "thumbnail": "images/url-shortener-thumbnail.png",
+      "liveLink": "",
+      "sourceCode": "https://github.com/ammu0113/url-shortener",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Material-UI",
+        "React Query",
+        "JWT Authentication",
+        "Axios",
+        "SweetAlert2",
+        "RESTful API"
+      ],
+      "highlights": [
+        "Implemented secure user authentication with JWT",
+        "Created responsive dashboard for URL management",
+        "Developed real-time click tracking and analytics",
+        "Built RESTful API with Express.js and MongoDB",
+        "Integrated Material-UI for modern, responsive design",
+        "Added URL validation and error handling",
+        "Implemented efficient state management with React Query",
+        "Created user-friendly notifications with SweetAlert2"
+      ],
+      "features": [
+        "URL Shortening with custom validation",
+        "User Authentication and Authorization",
+        "Click Analytics and Tracking",
+        "Responsive Dashboard Interface",
+        "Real-time Data Updates",
+        "Secure API Endpoints"
+      ]
     }
   ]
 }

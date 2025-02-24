@@ -8,7 +8,7 @@ Sitemap: https://ammu0113.github.io/my-portfolio/sitemap.xml
 # Crawl-delay
 Crawl-delay: 10
 
-# Specific path rules
+# Allow static assets
 Allow: /*.js
 Allow: /*.css
 Allow: /*.png
@@ -17,7 +17,7 @@ Allow: /*.gif
 Allow: /*.svg
 Allow: /*.ico
 
-# Prevent crawling of certain paths
+# Prevent crawling of unnecessary paths
 Disallow: /api/
 Disallow: /temp/
 Disallow: /draft/

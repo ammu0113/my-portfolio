@@ -24,6 +24,7 @@ const Projects = () => {
                   >
                     <FiGithub /> Code
                   </a>
+                  {project.liveLink && (
                   <a 
                     href={project.liveLink} 
                     target="_blank" 
@@ -31,7 +32,7 @@ const Projects = () => {
                     className="project-card__link"
                   >
                     <FiExternalLink /> Live
-                  </a>
+                  </a>)}
                 </div>
               </div>
               <div className="project-card__content">
