@@ -8,6 +8,8 @@ import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import "./styles/main.scss";
 import SEO from "./components/SEO/SEO";
+import Footer from "./components/Footer/Footer";
+import ChatWidget from "./components/ChatWidget/ChatWidget";
 
 // Import all SCSS files
 import "./components/Header/Header.scss";
@@ -20,7 +22,7 @@ import "./components/Contact/Contact.scss";
 // Import portfolio data
 import portfolioData from "./data/portfolio-data.json";
 import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer/Footer";
+
 const App = () => {
   return (
     <PortfolioProvider>
@@ -38,8 +40,8 @@ const App = () => {
           <Projects />
           <Education />
           <Contact />
-
           <Footer />
+          <ChatWidget />
         </main>
       </div>
     </PortfolioProvider>
