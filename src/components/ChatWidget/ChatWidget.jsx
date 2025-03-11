@@ -23,6 +23,17 @@ const ChatWidget = () => {
         - DevOps: ${skills.versionControlTools.join(", ")}
     `;
 
+    // Add this new function to get all projects info
+    const getAllProjects = () => {
+        return `Here are Amulya's projects:
+${projects.map((project, index) => 
+    `${index + 1}. ${project.title}`
+).join('\n')}
+
+You can ask me about any specific project for more details!`;
+    };
+
+    // Update the knowledgeBase object to include projects-related queries
     const knowledgeBase = {
         "who is amulya": `Amulya Bandla is a ${personalInfo.firstname} ${personalInfo.lastname}, a Senior Full Stack Developer with ${summary[0]}.`,
         "current job": `Amulya is currently working as a ${experience[0].position} at ${experience[0].company}, ${experience[0].location}.`,
@@ -33,16 +44,14 @@ const ChatWidget = () => {
         "location": `Amulya is located in ${personalInfo.location}.`,
         "experience": `${summary.slice(0, 3).join(" ")}`,
         "skills": `Amulya's key skills include ${skills.languages.join(", ")}, and expertise in ${skills.cloudTechnologies.slice(0, 5).join(", ")}.`,
+        "projects": getAllProjects(),
+        "portfolio projects": getAllProjects(),
+        "show projects": getAllProjects(),
+        "list projects": getAllProjects(),
+        "what projects": getAllProjects(),
     };
 
-    // Add project-specific responses
-    projects.forEach((project) => {
-        knowledgeBase[project.title.toLowerCase()] = 
-            `${project.description} Technologies used: ${project.technologies.join(", ")}. ${
-                project.liveLink ? `Live demo: ${project.liveLink}` : ''
-            } ${project.sourceCode ? `Source code: ${project.sourceCode}` : ''}`;
-    });
-
+    // Update the getResponse function to better handle project queries
     const getResponse = (question) => {
         question = question.toLowerCase();
         
@@ -51,11 +60,27 @@ const ChatWidget = () => {
             return technologiesUsed;
         }
 
+        // Special handling for project-related queries
+        if (question.includes("project")) {
+            return getAllProjects();
+        }
+
         // Check for matches in knowledge base
         for (const [key, value] of Object.entries(knowledgeBase)) {
             if (question.includes(key.toLowerCase())) {
                 return value;
             }
+        }
+
+        // Check for specific project names
+        const projectMatch = projects.find(project => 
+            question.includes(project.title.toLowerCase())
+        );
+        if (projectMatch) {
+            return `${projectMatch.title}: ${projectMatch.description}
+Technologies used: ${projectMatch.technologies.join(", ")}
+${projectMatch.liveLink ? `Live demo: ${projectMatch.liveLink}` : ''}
+${projectMatch.sourceCode ? `Source code: ${projectMatch.sourceCode}` : ''}`;
         }
 
         // Default response if no match found
