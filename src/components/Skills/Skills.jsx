@@ -1,158 +1,193 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { usePortfolio } from '../../context/PortfolioContext';
+// Font Awesome icons
+import { 
+  FaCode, 
+  FaDatabase, 
+  FaCloud, 
+  FaReact, 
+  FaGitAlt, 
+  FaRobot, 
+  FaDesktop,
+  FaAws,
+  FaDocker,
+  FaJenkins,
+  FaGithub,
+  FaPython,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3,
+  FaVuejs
+} from 'react-icons/fa';
+
+// Simple Icons
+import { 
+  SiTypescript, 
+  SiJavascript, 
+  SiBootstrap, 
+  SiTailwindcss, 
+  SiNextdotjs,
+  SiKubernetes, 
+  SiTerraform, 
+  SiAnsible,
+  SiMongodb,
+  SiPostgresql,
+  SiRedis,
+  SiFirebase,
+  SiOracle,
+  SiGraphql,
+  SiJest,
+  SiCypress,
+  SiSelenium,
+  SiStorybook
+} from 'react-icons/si';
+
 import './Skills.scss';
 
-const getSkillConfig = (category) => {
-  const configs = {
-    languages: {
-      icon: ['fab', 'js'],
-      unicode: '\uf3b8',
-      color: '#F7DF1E'
-    },
-    cloudTechnologies: {
-      icon: ['fab', 'aws'],
-      unicode: '\uf375',
-      color: '#FF9900'
-    },
-    webTechnologies: {
-      icon: ['fab', 'html5'],
-      unicode: '\uf13b',
-      color: '#E34F26'
-    },
-    reactEcosystem: {
-      icon: ['fab', 'react'],
-      unicode: '\uf41b',
-      color: '#61DAFB'
-    },
-    databaseEnvironments: {
-      icon: ['fas', 'database'],
-      unicode: '\uf1c0',
-      color: '#336791'
-    },
-    versionControlTools: {
-      icon: ['fab', 'git-alt'],
-      unicode: '\uf841',
-      color: '#F05032'
-    },
-    automationTesting: {
-      icon: ['fas', 'vial'],
-      unicode: '\uf492',
-      color: '#8BC34A'
-    },
-    operatingSystems: {
-      icon: ['fab', 'linux'],
-      unicode: '\uf17c',
-      color: '#185886'
-    }
-  };
-  return configs[category] || { icon: ['fas', 'code'], unicode: '\uf121', color: '#607D8B' };
-};
-
-const getSkillLogos = (skillName) => {
-  const logos = {
-    'JavaScript': ['fab', 'js'],
-    'TypeScript': ['fab', 'js'],
-    'Python': ['fab', 'python'],
-    'React.js': ['fab', 'react'],
-    'Vue.js': ['fab', 'vuejs'],
-    'Node.js': ['fab', 'node-js'],
-    'HTML5': ['fab', 'html5'],
-    'CSS3': ['fab', 'css3-alt'],
-    'AWS': ['fab', 'aws'],
-    'Docker': ['fab', 'docker'],
-    'Jenkins': ['fab', 'jenkins'],
-    'Git': ['fab', 'git-alt'],
-    'GitHub': ['fab', 'github'],
-    'GitLab': ['fab', 'gitlab'],
-    'MongoDB': ['fas', 'database'],
-    'PostgreSQL': ['fas', 'database'],
-    'MySQL': ['fas', 'database'],
-    'Linux': ['fab', 'linux'],
-    'Ubuntu': ['fab', 'ubuntu'],
-    'Windows': ['fab', 'windows'],
-    'MacOS': ['fab', 'apple']
-  };
-  return logos[skillName] || null;
-};
-
-const getSkillColor = (index) => {
-  const colors = [
-    { light: '#E3F2FD', dark: '#1E88E5' }, // Blue
-    { light: '#F3E5F5', dark: '#8E24AA' }, // Purple
-    { light: '#E8F5E9', dark: '#43A047' }, // Green
-    { light: '#FFF3E0', dark: '#FB8C00' }, // Orange
-    { light: '#E1F5FE', dark: '#039BE5' }, // Light Blue
-    { light: '#FCE4EC', dark: '#D81B60' }, // Pink
-    { light: '#F1F8E9', dark: '#7CB342' }, // Light Green
-    { light: '#FFEBEE', dark: '#E53935' }  // Red
-  ];
-  return colors[index % colors.length];
-};
-
 const Skills = () => {
-  const { skills } = usePortfolio();
-
   const skillCategories = [
-    { key: 'languages', title: 'Programming Languages' },
-    { key: 'cloudTechnologies', title: 'Cloud & DevOps' },
-    { key: 'webTechnologies', title: 'Web Technologies' },
-    { key: 'reactEcosystem', title: 'React Ecosystem' },
-    { key: 'databaseEnvironments', title: 'Database Technologies' },
-    { key: 'versionControlTools', title: 'Version Control' },
-    { key: 'automationTesting', title: 'Testing & QA' },
-    { key: 'operatingSystems', title: 'Operating Systems' }
+    {
+      title: "Programming Languages",
+      icon: <FaCode className="icon-code" />,
+      skills: [
+        { name: "JavaScript", icon: <SiJavascript className="icon-javascript" /> },
+        { name: "TypeScript", icon: <SiTypescript className="icon-typescript" /> },
+        { name: "Python", icon: <FaPython className="icon-python" /> }
+      ]
+    },
+    {
+      title: "Cloud Technologies",
+      icon: <FaCloud className="icon-cloud" />,
+      skills: [
+        { name: "AWS - EC2", icon: <FaAws className="icon-aws" /> },
+        { name: "Lambda", icon: <FaAws className="icon-aws" /> },
+        { name: "S3", icon: <FaAws className="icon-aws" /> },
+        { name: "API Gateway", icon: <FaAws className="icon-aws" /> },
+        { name: "RDS", icon: <FaAws className="icon-aws" /> },
+        { name: "DynamoDB", icon: <FaAws className="icon-aws" /> },
+        { name: "CloudWatch", icon: <FaAws className="icon-aws" /> },
+        { name: "CloudFront", icon: <FaAws className="icon-aws" /> },
+        { name: "Route53", icon: <FaAws className="icon-aws" /> },
+        { name: "SQS", icon: <FaAws className="icon-aws" /> },
+        { name: "SNS", icon: <FaAws className="icon-aws" /> },
+        { name: "Elastic Beanstalk", icon: <FaAws className="icon-aws" /> },
+        { name: "Docker", icon: <FaDocker className="icon-docker" /> },
+        { name: "Kubernetes", icon: <SiKubernetes className="icon-kubernetes" /> },
+        { name: "Jenkins", icon: <FaJenkins className="icon-jenkins" /> },
+        { name: "CI/CD pipelines", icon: <FaJenkins className="icon-jenkins" /> },
+        { name: "Terraform", icon: <SiTerraform className="icon-terraform" /> },
+        { name: "Ansible", icon: <SiAnsible className="icon-ansible" /> }
+      ]
+    },
+    {
+      title: "Web Technologies",
+      icon: <FaCode className="icon-code" />,
+      skills: [
+        { name: "HTML5", icon: <FaHtml5 className="icon-html5" /> },
+        { name: "CSS3", icon: <FaCss3 className="icon-css3" /> },
+        { name: "JavaScript (ES6+)", icon: <SiJavascript className="icon-javascript" /> },
+        { name: "React.js", icon: <FaReact className="icon-react" /> },
+        { name: "Vue.js", icon: <FaVuejs className="icon-vuejs" /> },
+        { name: "Node.js", icon: <FaNodeJs className="icon-nodejs" /> },
+        { name: "Bootstrap", icon: <SiBootstrap className="icon-bootstrap" /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="icon-tailwindcss" /> },
+        { name: "GraphQL", icon: <SiGraphql className="icon-graphql" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="icon-nextjs" /> }
+      ]
+    },
+    {
+      title: "React Ecosystem",
+      icon: <FaReact className="icon-react" />,
+      skills: [
+        { name: "Redux-Saga", icon: <FaReact className="icon-react" /> },
+        { name: "Redux Toolkit", icon: <FaReact className="icon-react" /> },
+        { name: "React Lifecycle", icon: <FaReact className="icon-react" /> },
+        { name: "Performance Optimization", icon: <FaReact className="icon-react" /> },
+        { name: "Custom Hooks", icon: <FaReact className="icon-react" /> },
+        { name: "Component Patterns", icon: <FaReact className="icon-react" /> },
+        { name: "HOCs", icon: <FaReact className="icon-react" /> },
+        { name: "Render Props", icon: <FaReact className="icon-react" /> }
+      ]
+    },
+    {
+      title: "Database Environments",
+      icon: <FaDatabase className="icon-sqlserver" />,
+      skills: [
+        { name: "Oracle", icon: <SiOracle className="icon-oracle" /> },
+        { name: "SQL Server", icon: <FaDatabase className="icon-sqlserver" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql className="icon-postgresql" /> },
+        { name: "MongoDB", icon: <SiMongodb className="icon-mongodb" /> },
+        { name: "Redis", icon: <SiRedis className="icon-redis" /> },
+        { name: "Firebase", icon: <SiFirebase className="icon-firebase" /> },
+        { name: "DynamoDB", icon: <FaAws className="icon-aws" /> },
+        { name: "Cassandra", icon: <FaDatabase className="icon-cassandra" /> },
+        { name: "Influx DB", icon: <FaDatabase className="icon-influxdb" /> }
+      ]
+    },
+    {
+      title: "Version Control",
+      icon: <FaGitAlt  className="icon-git" />,
+      skills: [
+        { name: "Git", icon: <FaGitAlt className="icon-git" /> },
+        { name: "GitHub", icon: <FaGithub className="icon-github" /> },
+        { name: "GitLab", icon: <FaGitAlt className="icon-gitlab" /> },
+        { name: "Bitbucket", icon: <FaGitAlt className="icon-bitbucket" /> },
+        { name: "SVN", icon: <FaGitAlt className="icon-svn" /> }
+      ]
+    },
+    {
+      title: "Testing & Automation",
+      icon: <FaRobot className="icon-robot" />,
+      skills: [
+        { name: "Jest", icon: <SiJest className="icon-jest" /> },
+        { name: "React Testing Library", icon: <FaReact className="icon-reacttestinglibrary" /> },
+        { name: "Cypress", icon: <SiCypress className="icon-cypress" /> },
+        { name: "Selenium", icon: <SiSelenium className="icon-selenium" /> },
+        { name: "Cucumber", icon: <FaRobot className="icon-cucumber" /> },
+        { name: "Playwright", icon: <FaRobot className="icon-playwright" /> },
+        { name: "Storybook", icon: <SiStorybook className="icon-storybook" /> },
+        { name: "Karma", icon: <FaRobot className="icon-karma" /> },
+        { name: "Jasmine", icon: <FaRobot className="icon-jasmine" /> }
+      ]
+    },
+    {
+      title: "Operating Systems",
+      icon: <FaDesktop className="icon-windows" />,
+      skills: [
+        { name: "Windows", icon: <FaDesktop className="icon-windows" /> },
+        { name: "MacOS", icon: <FaDesktop className="icon-macos" /> },
+        { name: "Linux", icon: <FaDesktop className="icon-linux" /> },
+        { name: "UNIX", icon: <FaDesktop className="icon-unix" /> }
+      ]
+    }
   ];
 
   return (
     <section id="skills" className="skills">
       <div className="skills__container">
-        <h2 className="section-title">Technical Expertise</h2>
+        <h2 className="section-title">Skills</h2>
         <div className="skills__grid">
-          {skillCategories.map((category, index) => {
-            const config = getSkillConfig(category.key);
-            return (
-              <div 
-                key={category.key} 
-                className="skills__category"
-                data-category={category.key}
-                data-icon={config.unicode}
-              >
-                <div className="skills__category-header">
-                  <div 
-                    className="skills__category-icon"
-                    style={{ background: config.color }}
-                  >
-                    <FontAwesomeIcon icon={config.icon} />
-                  </div>
-                  <h3>{category.title}</h3>
+          {skillCategories.map((category, index) => (
+            <div key={index} className="skills__category">
+              <div className="skills__category-header">
+                <div className="skills__category-icon">
+                  {category.icon}
                 </div>
-                <div className="skills__items">
-                  {skills[category.key].map((skill, skillIndex) => (
-                    <span 
-                      key={skillIndex} 
-                      className="skill-tag"
-                      style={{
-                        animationDelay: `${skillIndex * 0.1}s`
-                      }}
-                    >
-                      {getSkillLogos(skill) && (
-                        <FontAwesomeIcon 
-                          icon={getSkillLogos(skill)} 
-                          className="skill-tag__icon"
-                        />
-                      )}
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+                <h3>{category.title}</h3>
               </div>
-            );
-          })}
+              <div className="skills__items">
+                {category.skills.map((skill, skillIndex) => (
+                  <span key={skillIndex} className="skill-tag">
+                    <span className="skill-tag__icon">{skill.icon}</span>
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default Skills; 
+export default Skills;

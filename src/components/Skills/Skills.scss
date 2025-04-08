@@ -20,118 +20,109 @@ $category-colors: (
   &__container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 $container-padding;
+    padding: 0 $spacing-unit * 2;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: $spacing-unit * 3;
-    margin-top: $spacing-unit * 5;
+    margin-top: $spacing-unit * 4;
   }
 
   &__category {
-    background: white;
-    border-radius: 16px;
+    background: #ffffff;
+    border-radius: 20px;
     padding: $spacing-unit * 3;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 
-    @each $category, $color in $category-colors {
-      &[data-category="#{$category}"] {
-        .skills__category-icon {
-          background: $color;
-          width: 48px;
-          height: 48px;
-          border-radius: 12px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: $spacing-unit * 2;
-
-          svg {
-            color: white;
-            font-size: 24px;
-          }
-        }
-
-        .skill-tag {
-          background: rgba($color, 0.1);
-          color: darken($color, 10%);
-          border: none;
-
-          &:hover {
-            background: rgba($color, 0.15);
-            transform: translateY(-2px);
-          }
-        }
-      }
+    &:hover {
+      transform: translateY(-5px);
+      cursor: pointer;
     }
 
     &-header {
+      display: flex;
+      align-items: center;
+      gap: $spacing-unit * 2;
       margin-bottom: $spacing-unit * 3;
-      
+
       h3 {
-        color: $primary-color;
         font-size: 1.25rem;
         font-weight: 600;
-        margin-top: $spacing-unit;
+        color: #000;
       }
+    }
+
+    &-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: rgba(0, 0, 0, 0.05);
+      color: #000;
     }
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
   }
 }
 
 .skill-tag {
-  padding: $spacing-unit $spacing-unit * 2;
-  border-radius: 20px;
+  padding: 8px 16px;
+  border-radius: 50px;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
-  display: inline-flex;
+  background: #ffffff;
+  color: #000;
+  display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   
-  &__icon {
-    font-size: 1rem;
-  }
-
-  // Add glassmorphism effect
-  background: rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  
-  // Enhance hover effect
   &:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 
-      0 6px 8px -1px rgba(0, 0, 0, 0.15),
-      0 3px 6px -1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #f8f9fa;
+  }
+
+  &__icon {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+
+    .icon-javascript { color: #F7DF1E; }
+    .icon-typescript { color: #3178C6; }
+    .icon-python { color: #3776AB; }
+    .icon-react { color: #61DAFB; }
+    .icon-vue { color: #4FC08D; }
+    .icon-aws { color: #FF9900; }
+    .icon-docker { color: #2496ED; }
+    .icon-kubernetes { color: #326CE5; }
+    .icon-jenkins { color: #D24939; }
+    .icon-terraform { color: #7B42BC; }
+    .icon-ansible { color: #EE0000; }
+    .icon-mongodb { color: #47A248; }
+    .icon-postgresql { color: #336791; }
+    .icon-redis { color: #DC382D; }
+    .icon-firebase { color: #FFCA28; }
+    .icon-git { color: #F05032; }
+    .icon-github { color: #181717; }
+    .icon-gitlab { color: #FC6D26; }
+    .icon-jest { color: #C21325; }
+    .icon-cypress { color: #17202C; }
+    .icon-selenium { color: #43B02A; }
   }
 }
 
-// Optional: Add subtle animation
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-// Mobile optimizations
 @media screen and (max-width: 768px) {
   .skills {
     &__grid {
@@ -148,6 +139,232 @@ $category-colors: (
   .skill-tag {
     font-size: 0.8rem;
     padding: 6px 12px;
-    white-space: nowrap;
   }
-} 
+}
+
+.skill-tag__icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  color: var(--icon-color, #000); /* Default color, can be overridden */
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #ff6347; /* Change to any color you want on hover */
+  }
+}
+
+/* Add specific icon colors */
+.icon-javascript {
+  color: #f7df1e; /* JavaScript yellow */
+}
+
+.icon-typescript {
+  color: #007acc; /* TypeScript blue */
+}
+
+.icon-python {
+  color: #306998; /* Python blue */
+}
+
+.icon-react {
+  color: #61dafb; /* React blue */
+}
+
+.icon-aws {
+  color: #ff9900; /* AWS orange */
+}
+
+.icon-mongodb {
+  color: #4db33d; /* MongoDB green */
+}
+
+.icon-postgresql {
+  color: #336791; /* PostgreSQL blue */
+}
+
+.icon-html5 {
+  color: #e34c26; /* HTML5 red */
+}
+
+.icon-css3 {
+  color: #1572b6; /* CSS3 blue */
+}
+
+.icon-nodejs {
+  color: #8cc84b; /* Node.js green */
+}
+
+.icon-vuejs {
+  color: #42b883; /* Vue.js green */
+}
+
+.icon-tailwindcss {
+  color: #38bdf8; /* Tailwind CSS blue */
+}
+
+.icon-bootstrap {
+  color: #563d7c; /* Bootstrap purple */
+}
+
+.icon-kubernetes {
+  color: #326ce5; /* Kubernetes blue */
+}
+
+.icon-docker {
+  color: #2496ed; /* Docker blue */
+}
+
+.icon-jenkins {
+  color: #d24939; /* Jenkins red */
+}
+
+.icon-ansible {
+  color: #ee8c0f; /* Ansible orange */
+}
+
+.icon-terraform {
+  color: #7b42bc; /* Terraform purple */
+}
+
+.icon-git {
+  color: #f1502f; /* Git orange */
+}
+
+.icon-github {
+  color: #181717; /* GitHub black */
+}
+
+.icon-gitlab {
+  color: #fca326; /* GitLab orange */
+}
+
+.icon-bitbucket {
+  color: #0052cc; /* Bitbucket blue */
+}
+
+.icon-svn {
+  color: #809cc9; /* SVN blue */
+}
+
+.icon-selenium {
+  color: #43b02a; /* Selenium green */
+}
+
+.icon-cypress {
+  color: #17202c; /* Cypress dark */
+}
+
+.icon-jest {
+  color: #c21325; /* Jest red */
+}
+
+.icon-code {
+  color: #61DAFB;
+}
+.icon-cloud {
+  color: #F5A623;
+}
+.icon-robot {
+  color: #7B42BC; 
+}
+.icon-reacttestinglibrary {
+  color: #ff61f2; /* React Testing Library pink */
+}
+
+.icon-playwright {
+  color: #2e3131; /* Playwright dark */
+}
+
+.icon-karma {
+  color: #ff9e00; /* Karma yellow */
+}
+
+.icon-cucumber {
+  color: #4b8b3b; /* Cucumber green */
+}
+
+.icon-storybook {
+  color: #ff4785; /* Storybook pink */
+}
+
+.icon-windows {
+  color: #0078d4; /* Windows blue */
+}
+
+.icon-macos {
+  color: #1d78ff; /* MacOS blue */
+}
+
+.icon-linux {
+  color: #f0c674; /* Linux yellow */
+}
+
+.icon-unix {
+  color: #e6e6e6; /* UNIX grey */
+}
+
+.icon-oracle {
+  color: #f80000; /* Oracle red */
+}
+
+.icon-sqlserver {
+  color: #8a1f31; /* SQL Server red */
+}
+
+.icon-cassandra {
+  color: #f4e1c1; /* Cassandra light */
+}
+
+.icon-influxdb {
+  color: #22a8f5; /* InfluxDB blue */
+}
+
+/* Header Icon Colors */
+.skills__category-header .skills__category-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--header-icon-color, #000); /* Default color, can be overridden */
+  transition: all 0.3s ease;
+}
+
+.skills__category-header .skills__category-icon {
+  /* Add colors for the icons in headers */
+  &.icon-languages {
+    color: #4A90E2; /* Blue for Programming Languages */
+  }
+
+  &.icon-cloudtechnologies {
+    color: #F5A623; /* Orange for Cloud Technologies */
+  }
+
+  &.icon-webtechnologies {
+    color: #7ED321; /* Green for Web Technologies */
+  }
+
+  &.icon-reactecosystem {
+    color: #61DAFB; /* React Blue */
+  }
+
+  &.icon-databaseenvironments {
+    color: #476282; /* Navy Blue for Databases */
+  }
+
+  &.icon-versioncontrol {
+    color: #E27A68; /* Coral for Version Control */
+  }
+
+  &.icon-automationtesting {
+    color: #95C13D; /* Light Green for Testing & Automation */
+  }
+
+  &.icon-operatingsystems {
+    color: #476282; /* Navy Blue for Operating Systems */
+  }
+}
